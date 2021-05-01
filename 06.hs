@@ -1,8 +1,7 @@
-
--- unfinished
-kwad:: (Floating a) => a -> a -> a -> [a]
-kwad a b c = let d = (b ^ 2) - 4.0 * a * c in 
-    if d < 0 then
-        []  
-    else
-        [(-b - sqrt d)/(2*a)]
+kwad a b c = check (signum d) where
+        d = (b ^ 2) - 4.0 * a * c
+        p = - b / (2 * a)
+        q = sqrt d / (2 * a)
+        check 1 = [p - q,p + q]
+        check 0 = [p]
+        check _ = []
