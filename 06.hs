@@ -5,4 +5,3 @@ kwad a b c = check (signum d) where
         check 1 = [p - q,p + q]
         check 0 = [p]
         check _ = []
-       
