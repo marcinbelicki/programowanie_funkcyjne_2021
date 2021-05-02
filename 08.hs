@@ -12,3 +12,4 @@ exp_i b e = exp_i_help b e 1 where
     exp_i_help b e acc = check (e `mod` 2) where
         check 0 = exp_i_help (b ^ 2) (div e 2) acc
         check _ = exp_i_help b (e - 1) (b*acc)
+        
