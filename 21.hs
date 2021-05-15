@@ -38,4 +38,4 @@ maxBinTree' a = check (foldBinTree (\x y z -> max' (Just x) (max' y z)) Nothing 
     check (Just l) = l
 
 --d
-preBinTree' = foldBinTree (\x y z -> x:(concat[y,z])) [] where
+preBinTree' = foldBinTree (\x y z -> x:(concat[y,z])) [] 
